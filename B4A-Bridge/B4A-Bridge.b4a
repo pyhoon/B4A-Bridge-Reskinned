@@ -11,7 +11,7 @@ Library6=randomaccessfile
 Library7=runtimepermissions
 Library8=xui views
 Library9=appcompat
-ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~CreateResourceFromFile(Macro, Core.NetworkClearText)~\n~'CreateResourceFromFile(Macro, Themes.LightTheme)~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <external-files-path name="name" path="" />~\n~)~\n~AddPermission(android.permission.REQUEST_INSTALL_PACKAGES)~\n~AddPermission(android.permission.CHANGE_WIFI_MULTICAST_STATE)~\n~AddPermission(android.permission.SYSTEM_ALERT_WINDOW)~\n~~\n~SetApplicationAttribute(android:icon, "@mipmap/ic_launcher")~\n~CreateResource(mipmap-anydpi-v28, ic_launcher.xml,~\n~<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">~\n~    <background android:drawable="@mipmap/background"/>~\n~    <foreground android:drawable="@mipmap/foreground"/>~\n~</adaptive-icon>~\n~)
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="30"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~CreateResourceFromFile(Macro, Core.NetworkClearText)~\n~'CreateResourceFromFile(Macro, Themes.LightTheme)~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <external-files-path name="name" path="" />~\n~)~\n~AddPermission(android.permission.REQUEST_INSTALL_PACKAGES)~\n~AddPermission(android.permission.CHANGE_WIFI_MULTICAST_STATE)~\n~AddPermission(android.permission.SYSTEM_ALERT_WINDOW)~\n~~\n~SetApplicationAttribute(android:icon, "@mipmap/ic_launcher")~\n~CreateResource(mipmap-anydpi-v28, ic_launcher.xml,~\n~<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">~\n~    <background android:drawable="@mipmap/background"/>~\n~    <foreground android:drawable="@mipmap/foreground"/>~\n~</adaptive-icon>~\n~)
 Module1=AsyncStreamsText
 Module2=FTPClient
 Module3=FTPDataConnection
@@ -22,7 +22,7 @@ Module7=Utils
 NumberOfFiles=1
 NumberOfLibraries=9
 NumberOfModules=7
-Version=10.6
+Version=11.5
 @EndOfDesignText@
 #Region Module Attributes
 	#FullScreen: False
@@ -39,25 +39,25 @@ Version=10.6
 	#Extends: android.support.v7.app.AppCompatActivity
 'Activity module
 Sub Process_Globals
-	Private server As ServerSocket 'ignore - Only used to show the device IP.
-	Private firstTimeEnabledAutomaticatlly As Boolean
-	Private const SETTINGS_FILE As String = "settings.txt"
-	Private CurrentIp As String
 	Public FTPServerEnabled As Boolean
+	Private server As ServerSocket 'ignore - Only used to show the device IP.
 	Private phone As Phone
-	Private ion As Object
+	Private ion As Object	
+	Private firstTimeEnabledAutomaticatlly As Boolean
 	Private DrawOverRequested As Boolean
+	Private CurrentIp As String
+	Private const SETTINGS_FILE As String = "settings.txt"
 End Sub
 
 Sub Globals
 	Private lblIp As Label
 	Private lblStatus As Label
 	Private lblVersion As Label
-	Private btnStartWireless As Button
+	Private btnWirelessStart As Button
+	Private btnWirelessStop As Button
 	Private swtFTPServer As B4XSwitch
 	Private lblPing As Label
 	Private AnotherProgressBar1 As AnotherProgressBar
-	Private btnStop As Button	
 End Sub
 
 Sub Activity_Create(firstTime As Boolean)
@@ -80,6 +80,8 @@ Sub Activity_Create(firstTime As Boolean)
 	End Try
 	lblPing.Visible = False
 	DrawOverRequested = False
+	btnWirelessStart.Text = Chr(0xF1EB) & CRLF & "START"
+	btnWirelessStop.Text = Chr(0xF04D) & CRLF & "STOP"
 End Sub
 
 Sub Activity_Resume
@@ -88,7 +90,7 @@ Sub Activity_Resume
 	AnotherProgressBar1.Visible = AnotherProgressBar1.Visible
 	UpdateFileProgress
 	If File.ExternalWritable = False Then
-		btnStartWireless.Enabled = False
+		btnWirelessStart.Enabled = False
 		MsgboxAsync("Storage card not available. Make sure that your device is not connected in USB storage mode.", "")
 	Else If phone.SdkVersion >= 26 And CanRequestPackageInstalls = False Then
 		MsgboxAsync("Please allow B4A-Bridge to install applications.", "")
@@ -104,10 +106,10 @@ Sub Activity_Resume
 			DrawOverRequested = True
 			Wait For (GetDrawOverPermission) Complete (Success As Boolean)
 		End If
-		btnStartWireless.Enabled = True
+		btnWirelessStart.Enabled = True
 		If firstTimeEnabledAutomaticatlly = False Then
 			firstTimeEnabledAutomaticatlly = True
-			btnStartWireless_Click
+			btnWirelessStart_Click
 		End If
 	End If
 	UpdateThemeColors
@@ -115,11 +117,11 @@ End Sub
 
 Sub UpdateThemeColors
 	If IsNightMode Then
-		btnStartWireless.TextColor = 0xFF58C811
-		btnStop.TextColor = 0xFFFF3333
+		btnWirelessStart.TextColor = 0xFF58C811
+		btnWirelessStop.TextColor = 0xFFFF3333
 	Else
-		btnStartWireless.TextColor = 0xFF1E90FF '0xFF39800B 
-		btnStop.TextColor = Colors.Red
+		btnWirelessStart.TextColor = 0xFF00D254 '0xFF39800B ' 0xFF1E90FF
+		btnWirelessStop.TextColor = Colors.Red
 	End If
 End Sub
 
@@ -172,26 +174,27 @@ Sub UpdateIp
 		CurrentIp = "Not connected to wireless network."
 	End If
 	FTP_StateChanged
-	lblIp.Text = "Bridge IP: " & CurrentIp
+	lblIp.Text = "Device IP: " & CurrentIp
 End Sub
 
 Sub UpdateStatus
 	If Service1.ConnectedStatus Then
 		lblStatus.Text = "Connected"
 		lblStatus.Typeface = Typeface.DEFAULT_BOLD
-		lblStatus.Color = Colors.RGB(50, 205, 50)
-		lblStatus.TextColor = Colors.White
+		lblStatus.TextColor = 0xFF32CD32 'Colors.RGB(50, 205, 50)
+		btnWirelessStop.Visible = True
+		btnWirelessStart.Visible = False
 	Else
 		lblStatus.Typeface = Typeface.DEFAULT
 		If BridgeStarted Then
 			lblStatus.Text = "Waiting for connections"
-			lblStatus.Color = Colors.ARGB(0, 255, 255, 255)
-			lblStatus.TextColor = Colors.Red
+			lblStatus.TextColor = 0xFFDC143C 'Colors.RGB(220, 20, 60)
 		Else
 			lblStatus.Text = "Press on Start to listen"
-			lblStatus.Color = Colors.ARGB(0, 255, 255, 255)
-			lblStatus.TextColor = Colors.Gray
+			lblStatus.TextColor = 0xFF1E90FF 'Colors.RGB(30, 144, 255)
 		End If
+		btnWirelessStart.Visible = True
+		btnWirelessStop.Visible = False
 	End If
 	FTP_StateChanged
 End Sub
@@ -204,11 +207,11 @@ Private Sub BridgeStarted As Boolean
 	Return IsPaused(Service1) = False
 End Sub
 
-Sub btnStop_Click
+Sub btnWirelessStop_Click
 	StopService(Service1)
 End Sub
 
-Sub btnStartWireless_Click
+Sub btnWirelessStart_Click
 	StopService(Service1)
 	If swtFTPServer.Value Then
 		Starter.rp.CheckAndRequest(Starter.rp.PERMISSION_WRITE_EXTERNAL_STORAGE)
@@ -230,7 +233,7 @@ End Sub
 Private Sub swtFTPServer_ValueChanged (Value As Boolean)
 	FTPServerEnabled = Value
 	If Value And BridgeStarted And (Service1.FTP.IsInitialized = False Or Service1.FTP.Running = False) Then
-		btnStartWireless_Click
+		btnWirelessStart_Click
 	Else if Value = False And BridgeStarted Then
 		CallSub(Service1, "SetFTPServerState")
 	End If
