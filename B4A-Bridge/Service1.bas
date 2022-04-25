@@ -83,10 +83,10 @@ Private Sub UpdateNotification
 	Dim icon As String
 	Dim content As String
 	If ConnectedStatus Then
-		icon = "connect"
+		icon = "ic_connect"
 		content = "Connected"
 	Else
-		icon = "disconnect"
+		icon = "ic_disconnect"
 		content = "Disconnected"
 	End If
 	Notification1.Initialize2(Notification1.IMPORTANCE_LOW)
