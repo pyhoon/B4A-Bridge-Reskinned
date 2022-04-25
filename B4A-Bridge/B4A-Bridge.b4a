@@ -58,6 +58,8 @@ Sub Globals
 	Private swtFTPServer As B4XSwitch
 	Private lblPing As Label
 	Private AnotherProgressBar1 As AnotherProgressBar
+	Private pnlBackground As Panel
+	Private MadeWithLove1 As MadeWithLove
 End Sub
 
 Sub Activity_Create(firstTime As Boolean)
@@ -78,7 +80,7 @@ Sub Activity_Create(firstTime As Boolean)
 	Catch
 		Log(LastException)
 	End Try
-	lblPing.Visible = False
+	'lblPing.Visible = False
 	DrawOverRequested = False
 	btnWirelessStart.Text = Chr(0xF1EB) & CRLF & "START"
 	btnWirelessStop.Text = Chr(0xF04D) & CRLF & "STOP"
@@ -117,11 +119,16 @@ End Sub
 
 Sub UpdateThemeColors
 	If IsNightMode Then
+		'btnWirelessStart.TextColor = 0xFF58C811
+		'btnWirelessStop.TextColor = 0xFFFF3333
+		btnWirelessStart.TextColor = 0xFF00D254 '0xFF39800B ' 0xFF1E90FF
+		btnWirelessStop.TextColor = 0xFFDC143C 'Colors.Red
+	Else
 		btnWirelessStart.TextColor = 0xFF58C811
 		btnWirelessStop.TextColor = 0xFFFF3333
-	Else
-		btnWirelessStart.TextColor = 0xFF00D254 '0xFF39800B ' 0xFF1E90FF
-		btnWirelessStop.TextColor = Colors.Red
+		pnlBackground.Color = 0xFFF5F5F5
+		lblVersion.TextColor = 0xFF808080
+		MadeWithLove1.mBase.Color = 0xFF808080
 	End If
 End Sub
 
@@ -171,10 +178,19 @@ End Sub
 Sub UpdateIp
 	CurrentIp = server.GetMyWifiIP
 	If CurrentIp = "127.0.0.1" Or CurrentIp.Contains(":") Then
-		CurrentIp = "Not connected to wireless network."
+		'CurrentIp = "Not connected to wireless network."
+		lblIp.TextColor = 0xFFFF4500 ' 0xFFDC143C ' 0xFFFF1493
+		lblIp.Text = "Not connected to wireless network"
+		lblPing.TextColor = 0xFFFF4500 ' 0xFFDC143C ' 0xFFFF1493
+		lblPing.Text = Chr(0xF071)
+	Else
+		lblIp.TextColor = 0xFF1E90FF
+		lblIp.Text = "Device IP: " & CurrentIp
+		lblPing.TextColor = 0xFF1E90FF
+		lblPing.Text = Chr(0xF1EB)
 	End If
 	FTP_StateChanged
-	lblIp.Text = "Device IP: " & CurrentIp
+	'lblIp.Text = "Device IP: " & CurrentIp
 End Sub
 
 Sub UpdateStatus
