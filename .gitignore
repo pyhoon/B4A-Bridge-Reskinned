@@ -3,7 +3,6 @@ AutoBackups
 
 # Include png files inside drawable
 Objects/*
-!Objects/*.apk
-!Objects/res/
+!Objects/res
 Objects/res/*
-!Objects/res/drawable/
+!Objects/res/drawable
