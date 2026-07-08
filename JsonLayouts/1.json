@@ -1,0 +1,988 @@
+{
+    "MaterialIcons": false,
+    "Variants": [
+        {
+            "Scale": 1,
+            "Height": 480,
+            "Width": 320
+        },
+        {
+            "Scale": 1,
+            "Height": 320,
+            "Width": 480
+        }
+    ],
+    "LayoutHeader": {
+        "Version": 5,
+        "DesignerScript": [
+            "'All variants script\n'AutoScaleAll\nIf Portrait Then\n\tAnimatedSignal1.HorizontalCenter = 50%x\n'\tbtnStartWireless.HorizontalCenter = 50%x\n'\tbtnStop.HorizontalCenter = 50%x\nElse\n'\tbtnStartWireless.VerticalCenter = 50%y\n'\tbtnStop.VerticalCenter = 50%y\n'\t'btnStartWireless.Left = 100%x - 240dip\n'\tbtnStop.HorizontalCenter = lblVersion.HorizontalCenter\n'    btnStop.Left = btnWirelessStart.Left\nEnd If",
+            "'Variant specific script: 320x480,scale=1",
+            "'Variant specific script: 480x320,scale=1\n"
+        ],
+        "GridSize": 10,
+        "ControlsHeaders": [
+            {
+                "JavaType": ".ActivityWrapper",
+                "DesignerType": "Activity",
+                "Name": "Activity"
+            },
+            {
+                "JavaType": ".CustomViewWrapper",
+                "DesignerType": "CustomView",
+                "Name": "AnimatedSignal1"
+            },
+            {
+                "JavaType": ".CustomViewWrapper",
+                "DesignerType": "CustomView",
+                "Name": "AnotherProgressBar1"
+            },
+            {
+                "JavaType": ".ButtonWrapper",
+                "DesignerType": "Button",
+                "Name": "btnStartWireless"
+            },
+            {
+                "JavaType": ".ButtonWrapper",
+                "DesignerType": "Button",
+                "Name": "btnStop"
+            },
+            {
+                "JavaType": ".CompoundButtonWrapper$CheckBoxWrapper",
+                "DesignerType": "CheckBox",
+                "Name": "chkFTPServer"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "Label1"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "lblIp"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "lblPing"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "lblStatus"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "lblTitle"
+            },
+            {
+                "JavaType": ".LabelWrapper",
+                "DesignerType": "Label",
+                "Name": "lblVersion"
+            },
+            {
+                "JavaType": ".CustomViewWrapper",
+                "DesignerType": "CustomView",
+                "Name": "MadeWithLove1"
+            }
+        ],
+        "Files": []
+    },
+    "Data": {
+        "parent": "",
+        "drawable": {
+            "borderColor": {
+                "ValueType": 6,
+                "Value": "0xFF000000"
+            },
+            "orientation": "LEFT_RIGHT",
+            "color": {
+                "ValueType": 6,
+                "Value": "0xFFF8FAFC"
+            },
+            "csType": "Dbasic.Designer.Drawable.ColorDrawable",
+            "borderWidth": 0,
+            "type": ".drawable.ColorDrawable",
+            "cornerRadius": 0
+        },
+        "visible": true,
+        ":kids": {
+            "0": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 15
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 10,
+                    "left": 24,
+                    "hanchor": 0,
+                    "width": 170,
+                    "vanchor": 0,
+                    "height": 40
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 0,
+                    "left": 20,
+                    "hanchor": 2,
+                    "width": 20,
+                    "vanchor": 0,
+                    "height": 40
+                },
+                "top": 8,
+                "hanchor": 0,
+                "eventName": "lblTitle",
+                "tag": "",
+                "text": "",
+                "height": 40,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0xFFF0F8FF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF0F172A"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "DEFAULT",
+                "left": 178,
+                "materialIcons": "",
+                "name": "lblTitle",
+                "width": 100,
+                "style": "BOLD",
+                "hAlignment": "LEFT"
+            },
+            "11": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 15
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 38,
+                    "left": 30,
+                    "hanchor": 2,
+                    "width": 30,
+                    "vanchor": 1,
+                    "height": 30
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 150,
+                    "left": 20,
+                    "hanchor": 2,
+                    "width": 20,
+                    "vanchor": 0,
+                    "height": 40
+                },
+                "top": 144,
+                "hanchor": 0,
+                "eventName": "Label1",
+                "tag": "",
+                "text": "",
+                "height": 40,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0xFFF0F8FF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": false,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF000000"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "FontAwesome",
+                "left": 156,
+                "materialIcons": "",
+                "name": "Label1",
+                "width": 100,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "1": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 15
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 10,
+                    "left": 220,
+                    "hanchor": 2,
+                    "width": 66,
+                    "vanchor": 0,
+                    "height": 34
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 39,
+                    "left": 20,
+                    "hanchor": 0,
+                    "width": 232,
+                    "vanchor": 0,
+                    "height": 36
+                },
+                "top": 16,
+                "hanchor": 0,
+                "eventName": "lblIp",
+                "tag": "",
+                "text": "Device IP: 0.0.0.0",
+                "height": 36,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "orientation": "LEFT_RIGHT",
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF0F172A"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "DEFAULT",
+                "left": 24,
+                "materialIcons": "",
+                "name": "lblIp",
+                "width": 232,
+                "style": "BOLD",
+                "hAlignment": "LEFT"
+            },
+            "2": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 20
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 10,
+                    "left": 24,
+                    "hanchor": 1,
+                    "width": 32,
+                    "vanchor": 0,
+                    "height": 34
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 41,
+                    "left": 24,
+                    "hanchor": 1,
+                    "width": 32,
+                    "vanchor": 0,
+                    "height": 32
+                },
+                "top": 18,
+                "hanchor": 0,
+                "eventName": "lblPing",
+                "tag": "",
+                "text": "",
+                "height": 32,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF2563EB"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "FontAwesome",
+                "left": 264,
+                "materialIcons": "",
+                "name": "lblPing",
+                "width": 32,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "3": {
+                "parent": "Activity",
+                "shortType": "AnimatedSignal",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 14
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 60,
+                    "left": 30,
+                    "hanchor": 1,
+                    "width": 180,
+                    "vanchor": 0,
+                    "height": 72
+                },
+                "type": ".CustomViewWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 83,
+                    "left": 90,
+                    "hanchor": 0,
+                    "width": 145,
+                    "vanchor": 0,
+                    "height": 66
+                },
+                "top": 370,
+                "hanchor": 0,
+                "eventName": "AnimatedSignal1",
+                "tag": "",
+                "text": "",
+                "height": 66,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaCustomView",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF1E90FF"
+                },
+                "javaType": ".CustomViewWrapper",
+                "typeface": "DEFAULT",
+                "customType": "anywheresoftware.b4a.b4abridge.animatedsignal",
+                "customProperties": {
+                    "customType": "anywheresoftware.b4a.b4abridge.animatedsignal",
+                    "csType": "Dbasic.Designer.MetaCustomView+CustomDataGrid",
+                    "State": "idle",
+                    "shortType": "AnimatedSignal",
+                    "type": ""
+                },
+                "left": 96,
+                "materialIcons": "",
+                "name": "AnimatedSignal1",
+                "width": 128,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "4": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 17
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 81,
+                    "left": 30,
+                    "hanchor": 1,
+                    "width": 228,
+                    "vanchor": 1,
+                    "height": 54
+                },
+                "type": ".ButtonWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 180,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 56
+                },
+                "top": 152,
+                "hanchor": 0,
+                "eventName": "btnStartWireless",
+                "tag": "",
+                "text": "START  ",
+                "height": 56,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "orientation": "LEFT_RIGHT",
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0xFF10B981"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 14
+                },
+                "visible": true,
+                "pressed": false,
+                "csType": "Dbasic.Designer.MetaButton",
+                "fontAwesome": "START ",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": true,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFFFFFFFF"
+                },
+                "javaType": ".ButtonWrapper",
+                "typeface": "FontAwesome",
+                "left": 24,
+                "materialIcons": "",
+                "name": "btnStartWireless",
+                "width": 272,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "5": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 17
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 81,
+                    "left": 30,
+                    "hanchor": 1,
+                    "width": 228,
+                    "vanchor": 1,
+                    "height": 54
+                },
+                "type": ".ButtonWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 180,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 56
+                },
+                "top": 152,
+                "hanchor": 0,
+                "eventName": "btnStop",
+                "tag": "",
+                "text": "STOP  ",
+                "height": 56,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "orientation": "LEFT_RIGHT",
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0xFFEF4444"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 14
+                },
+                "visible": true,
+                "pressed": false,
+                "csType": "Dbasic.Designer.MetaButton",
+                "fontAwesome": "STOP ",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": true,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFFFFFFFF"
+                },
+                "javaType": ".ButtonWrapper",
+                "typeface": "FontAwesome",
+                "left": 24,
+                "materialIcons": "",
+                "name": "btnStop",
+                "width": 272,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "6": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 16
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 200,
+                    "left": 30,
+                    "hanchor": 1,
+                    "width": 228,
+                    "vanchor": 0,
+                    "height": 24
+                },
+                "type": ".CompoundButtonWrapper$CheckBoxWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 135,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 40
+                },
+                "top": 228,
+                "hanchor": 0,
+                "eventName": "chkFTPServer",
+                "tag": "",
+                "text": "Enable FTP Server",
+                "height": 40,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaCheckBox",
+                "fontAwesome": "",
+                "vAlignment": "BOTTOM",
+                "isChecked": false,
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF334155"
+                },
+                "javaType": ".CompoundButtonWrapper$CheckBoxWrapper",
+                "typeface": "DEFAULT",
+                "left": 24,
+                "materialIcons": "",
+                "name": "chkFTPServer",
+                "width": 272,
+                "style": "NORMAL",
+                "hAlignment": "LEFT"
+            },
+            "7": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 16
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 52,
+                    "left": 24,
+                    "hanchor": 0,
+                    "width": 330,
+                    "vanchor": 0,
+                    "height": 80
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 85,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 52
+                },
+                "top": 72,
+                "hanchor": 0,
+                "eventName": "lblStatus",
+                "tag": "",
+                "text": "",
+                "height": 52,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "orientation": "LEFT_RIGHT",
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 12
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF1E90FF"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "FontAwesome",
+                "left": 24,
+                "materialIcons": "",
+                "name": "lblStatus",
+                "width": 272,
+                "style": "BOLD",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "8": {
+                "parent": "Activity",
+                "shortType": "AnotherProgressBar",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 14
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 68,
+                    "left": 30,
+                    "hanchor": 2,
+                    "width": 30,
+                    "vanchor": 1,
+                    "height": 10
+                },
+                "type": ".CustomViewWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 70,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 15
+                },
+                "top": 300,
+                "hanchor": 0,
+                "eventName": "AnotherProgressBar1",
+                "tag": "",
+                "text": "",
+                "height": 10,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 14
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaCustomView",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFFF0F8FF"
+                },
+                "javaType": ".CustomViewWrapper",
+                "typeface": "DEFAULT",
+                "customType": "anywheresoftware.b4a.b4abridge.anotherprogressbar",
+                "customProperties": {
+                    "customType": "anywheresoftware.b4a.b4abridge.anotherprogressbar",
+                    "CornerRadius": 14,
+                    "ProgressColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF2563EB"
+                    },
+                    "csType": "Dbasic.Designer.MetaCustomView+CustomDataGrid",
+                    "shortType": "AnotherProgressBar",
+                    "Value": 0,
+                    "type": ""
+                },
+                "left": 24,
+                "materialIcons": "",
+                "name": "AnotherProgressBar1",
+                "width": 272,
+                "style": "NORMAL",
+                "hAlignment": "LEFT"
+            },
+            "9": {
+                "parent": "Activity",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 13
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 10,
+                    "left": 24,
+                    "hanchor": 0,
+                    "width": 200,
+                    "vanchor": 1,
+                    "height": 22
+                },
+                "type": ".LabelWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 45,
+                    "left": 24,
+                    "hanchor": 2,
+                    "width": 24,
+                    "vanchor": 1,
+                    "height": 24
+                },
+                "top": 340,
+                "hanchor": 0,
+                "eventName": "lblVersion",
+                "tag": "",
+                "text": "Version:",
+                "height": 24,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "orientation": "LEFT_RIGHT",
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaLabel",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFF94A3B8"
+                },
+                "javaType": ".LabelWrapper",
+                "typeface": "DEFAULT",
+                "left": 24,
+                "materialIcons": "",
+                "name": "lblVersion",
+                "width": 272,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            },
+            "10": {
+                "parent": "Activity",
+                "shortType": "MadeWithLove",
+                "fontsize": {
+                    "ValueType": 7,
+                    "Value": 14
+                },
+                "vanchor": 0,
+                "variant1": {
+                    "top": 10,
+                    "left": 20,
+                    "hanchor": 1,
+                    "width": 210,
+                    "vanchor": 1,
+                    "height": 26
+                },
+                "type": ".CustomViewWrapper",
+                "enabled": true,
+                "variant0": {
+                    "top": 15,
+                    "left": 20,
+                    "hanchor": 2,
+                    "width": 20,
+                    "vanchor": 1,
+                    "height": 30
+                },
+                "top": 450,
+                "hanchor": 2,
+                "eventName": "MadeWithLove1",
+                "tag": "",
+                "text": "",
+                "height": 26,
+                "ellipsize": "NONE",
+                "padding": {
+                    "ValueType": 12
+                },
+                "drawable": {
+                    "borderColor": {
+                        "ValueType": 6,
+                        "Value": "0xFF000000"
+                    },
+                    "color": {
+                        "ValueType": 6,
+                        "Value": "0x00FFFFFF"
+                    },
+                    "csType": "Dbasic.Designer.Drawable.ColorWithCornersDrawable",
+                    "borderWidth": 0,
+                    "type": ".drawable.ColorDrawable",
+                    "cornerRadius": 0
+                },
+                "visible": true,
+                "csType": "Dbasic.Designer.MetaCustomView",
+                "fontAwesome": "",
+                "vAlignment": "CENTER_VERTICAL",
+                "singleLine": false,
+                "textColor": {
+                    "ValueType": 6,
+                    "Value": "0xFFF0F8FF"
+                },
+                "javaType": ".CustomViewWrapper",
+                "typeface": "DEFAULT",
+                "customType": "anywheresoftware.b4a.b4abridge.madewithlove",
+                "customProperties": {
+                    "customType": "anywheresoftware.b4a.b4abridge.madewithlove",
+                    "csType": "Dbasic.Designer.MetaCustomView+CustomDataGrid",
+                    "shortType": "MadeWithLove",
+                    "type": ""
+                },
+                "left": 0,
+                "materialIcons": "",
+                "name": "MadeWithLove1",
+                "width": 320,
+                "style": "NORMAL",
+                "hAlignment": "CENTER_HORIZONTAL"
+            }
+        },
+        "csType": "Dbasic.Designer.MetaActivity",
+        "variant1": {
+            "top": 100,
+            "left": 100,
+            "hanchor": 0,
+            "width": 100,
+            "vanchor": 0,
+            "height": 100
+        },
+        "type": ".ActivityWrapper",
+        "title": "B4A-Bridge",
+        "enabled": true,
+        "variant0": {
+            "top": 100,
+            "left": 100,
+            "hanchor": 0,
+            "width": 100,
+            "vanchor": 0,
+            "height": 100
+        },
+        "fullScreen": false,
+        "javaType": ".ActivityWrapper",
+        "animationDuration": 0,
+        "titleColor": {
+            "ValueType": 6,
+            "Value": "0xFFFFFFFF"
+        },
+        "name": "Activity",
+        "eventName": "Activity",
+        "includeTitle": true,
+        "tag": ""
+    },
+    "FontAwesome": true
+}

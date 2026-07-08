@@ -1,4 +1,4 @@
-*.b4a linguist-language=b4x
-*.bas linguist-language=b4x
-*.b4a linguist-detectable=true
-*.bas linguist-detectable=true
+# Auto detect text files and perform LF normalization
+* text=auto
+*.bas linguist-language=B4X
+*.b4a linguist-language=B4X
